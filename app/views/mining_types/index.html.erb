@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('mining_type') %></h1>
+  <table style="width: auto;", class="table table-bordered table-hover table-sm">
+    <thead class="table-light align-center">
+      <tr class="table-active">
+        <th><%= @mining_types.human_attribute_name(:description) %></th>
+        <th><%= @mining_types.human_attribute_name(:acronym) %></th>
+        <th><%= t('menu') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @mining_types.each do |mining_type| %>
+        <tr>
+          <td>
+              <%= link_to image_tag('show_icon.png', size: '15x15'), mining_type %>
+              <%= link_to image_tag('edit_icon.svg', size: '15x15'), edit_mining_type_path(mining_type) %>
+              <%= link_to image_tag('delete_icon.png', size: '15x15'), mining_type, method: :delete, data: { confirm: t('messages.confirm') } %>
+          </td>
+          <td><%= mining_type.description %></td>
+          <td><%= mining_type.acronym %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<%= link_to t('new.mining_type'), new_mining_type_path, class:"btn btn-outline-primary btn-sm", role: "button" %>
+<%= link_to t('links.home page'), welcome_index_path, class:"btn btn-outline-secondary btn-sm", role: "button" %>
