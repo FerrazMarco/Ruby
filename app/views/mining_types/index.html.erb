@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= t('mining_type') %></h1>
-  <table style="width: auto;", class="table table-bordered table-hover table-sm">
+  <table style="width:auto;", class="table table-bordered table-hover table-sm">
     <thead class="table-light align-center">
       <tr class="table-active">
+        <th><%= t('menu') %></th>
         <th><%= @mining_types.human_attribute_name(:description) %></th>
         <th><%= @mining_types.human_attribute_name(:acronym) %></th>
-        <th><%= t('menu') %></th>
       </tr>
     </thead>
     <tbody>
