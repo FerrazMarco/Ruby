@@ -54,7 +54,7 @@ class CoinsController < ApplicationController
   def destroy
     @coin.destroy
     respond_to do |format|
-      format.html { redirect_to @coin, notice: "Moeda excluída com sucesso" }
+      format.html { redirect_to welcome_index_url, notice: "Moeda excluída com sucesso" }
       format.json { head :no_content }
     end
   end
