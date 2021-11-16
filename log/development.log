@@ -26384,3 +26384,254 @@ Migrating to AddMiningTypeToCoins (20211104211901)
   ↳ lib/tasks/dev.rake:53
   [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
   ↳ lib/tasks/dev.rake:53
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 22:09:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.8/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (1549.8ms)
+Completed 200 OK in 1941ms (Views: 1883.1ms | ActiveRecord: 6.3ms)
+
+
+Started DELETE "/coins/5" for 10.0.2.2 at 2021-11-16 22:09:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nuY9FQwtgBW9aUa1ERWC4NZjIFn1qwft9ytbqqzDOt90lrq4DKnf2gDHOdM8O6wL6Tk8ZCynYGHK4c4e1RKEBQ==", "id"=>"5"}
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[36mCoin Destroy (5.2ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 22ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 22:09:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 279ms (Views: 256.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 300ms (Views: 280.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 288ms (Views: 266.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 10.0.2.2 at 2021-11-16 22:09:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:13
+  Rendered mining_types/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 324ms (Views: 274.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/mining_types" for 10.0.2.2 at 2021-11-16 22:09:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.4ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:13
+  Rendered mining_types/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 272ms (Views: 249.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/mining_types/1/edit" for 10.0.2.2 at 2021-11-16 22:09:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiningType Load (1.3ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:62
+  Rendering mining_types/edit.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (9.9ms)
+  Rendered mining_types/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 267ms (Views: 243.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/mining_types" for 10.0.2.2 at 2021-11-16 22:09:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.7ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:13
+  Rendered mining_types/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 316ms (Views: 290.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/mining_types/new" for 10.0.2.2 at 2021-11-16 22:09:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (1.9ms)
+  Rendered mining_types/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 270ms (Views: 247.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 10.0.2.2 at 2021-11-16 22:09:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.1ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:13
+  Rendered mining_types/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 270ms (Views: 244.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 271ms (Views: 250.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 262ms (Views: 242.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 22:09:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 285ms (Views: 264.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 22:09:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 282ms (Views: 256.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/coins/new" for 10.0.2.2 at 2021-11-16 22:09:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#new as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "mining_types"."description", "mining_types"."id" FROM "mining_types"[0m
+  ↳ app/controllers/coins_controller.rb:64
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (4.0ms)
+  Rendered coins/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 257ms (Views: 234.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 22:09:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.0ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 254ms (Views: 232.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.5ms)
+  Rendered welcome/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 265ms (Views: 243.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.5ms)
+  Rendered welcome/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 268ms (Views: 248.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 10.0.2.2 at 2021-11-16 22:09:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.4ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:13
+  Rendered mining_types/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 285ms (Views: 261.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/mining_types" for 10.0.2.2 at 2021-11-16 22:09:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:13
+  Rendered mining_types/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 331ms (Views: 308.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mining_types/new" for 10.0.2.2 at 2021-11-16 22:09:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (1.9ms)
+  Rendered mining_types/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 265ms (Views: 242.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 10.0.2.2 at 2021-11-16 22:09:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:13
+  Rendered mining_types/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 259ms (Views: 237.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 274ms (Views: 251.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 22:09:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 295ms (Views: 273.0ms | ActiveRecord: 0.0ms)
+
+
