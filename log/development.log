@@ -25059,3 +25059,360 @@ Processing by CoinsController#index as HTML
 Completed 200 OK in 267ms (Views: 245.9ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 10.0.2.2 at 2021-11-16 21:25:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.8/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (233.4ms)
+Completed 200 OK in 1847ms (Views: 1824.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 10.0.2.2 at 2021-11-16 21:25:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.6.8/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/vagrant/.rvm/gems/ruby-2.6.8/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (15.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.6.8/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.6.8/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 101ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=coins" for 10.0.2.2 at 2021-11-16 21:25:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"coins"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:25:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 346ms (Views: 294.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:25:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 285ms (Views: 263.6ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/coins/5" for 10.0.2.2 at 2021-11-16 21:26:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"T16Lm0LVkAD8Q4WBMDFr9nSFhTzPoIPZDaVrEhI3t2KlLgw2QlHPz0Ht+ucdH0UdS9+ZARas5FUwb/6ma+YJuA==", "id"=>"5"}
+  [1m[36mCoin Load (1.7ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[36mCoin Destroy (4.1ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 20ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:26:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 269ms (Views: 248.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/info/routes?path=coins_url" for 10.0.2.2 at 2021-11-16 21:27:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"coins_url"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=coins_url" for 10.0.2.2 at 2021-11-16 21:27:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"coins_url"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=coins" for 10.0.2.2 at 2021-11-16 21:27:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"coins"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=coins" for 10.0.2.2 at 2021-11-16 21:27:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"coins"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:28:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 342ms (Views: 284.5ms | ActiveRecord: 7.1ms)
+
+
+Started DELETE "/coins/4" for 10.0.2.2 at 2021-11-16 21:28:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9nn3zu8deK8tmZQVU+vzshlWYJ8gHxMekWi0n01R1kYcCXBj75knYJA363N+xd1ZJgx8ovkTdJKsoiErNIBonA==", "id"=>"4"}
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[36mCoin Destroy (80.6ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 95ms (ActiveRecord: 88.6ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:28:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 290ms (Views: 269.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:29:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 306ms (Views: 251.8ms | ActiveRecord: 7.0ms)
+
+
+Started DELETE "/coins/3" for 10.0.2.2 at 2021-11-16 21:29:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E+6hgIQP7AHTT0ejgmPA0o1BrF/Nm8yMOatfWX/l00X5niYthIuzzm7hOMWvTe45shuwYhSXqwAEYcrtBjRtnw==", "id"=>"3"}
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[36mCoin Destroy (4.3ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 12.8ms)
+
+
+  
+NameError (undefined local variable or method `coins' for #<CoinsController:0x00007f86cc04c130>
+Did you mean?  @coin):
+  
+app/controllers/coins_controller.rb:57:in `block (2 levels) in destroy'
+app/controllers/coins_controller.rb:56:in `destroy'
+Started DELETE "/coins/3" for 10.0.2.2 at 2021-11-16 21:29:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E+6hgIQP7AHTT0ejgmPA0o1BrF/Nm8yMOatfWX/l00X5niYthIuzzm7hOMWvTe45shuwYhSXqwAEYcrtBjRtnw==", "id"=>"3"}
+  [1m[36mCoin Load (1.7ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:69
+Completed 404 Not Found in 36ms (ActiveRecord: 7.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Coin with 'id'=3):
+  
+app/controllers/coins_controller.rb:69:in `set_coin'
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:29:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 358ms (Views: 295.4ms | ActiveRecord: 7.7ms)
+
+
+Started DELETE "/coins/2" for 10.0.2.2 at 2021-11-16 21:29:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CrfFP2Lr3Qi2YsBJFlj+4oJBwcMOQL0Vm+tC0MER66rgx0KSYm+CxwvMvy87dtAJvRvd/tdM2pmmIddkuMBVcA==", "id"=>"2"}
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[36mCoin Destroy (4.6ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/coins_controller.rb:55
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:55
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 18ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/coins" for 10.0.2.2 at 2021-11-16 21:29:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:15
+  Rendered coins/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 287ms (Views: 264.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 21:29:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.7ms)
+  Rendered welcome/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 307ms (Views: 287.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 10.0.2.2 at 2021-11-16 21:29:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 288ms (Views: 263.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20211024195710)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211024195710_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211024195710"]]
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateMiningTypes (20211103222412)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "mining_types" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211103222412_create_mining_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211103222412"]]
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddMiningTypeToCoins (20211104211901)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE "coins" ADD "mining_type_id" integer[0m
+  ↳ db/migrate/20211104211901_add_mining_type_to_coins.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_coins_on_mining_type_id" ON "coins" ("mining_type_id")[0m
+  ↳ db/migrate/20211104211901_add_mining_type_to_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211104211901"]]
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (4.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-16 21:30:17.041457"], ["updated_at", "2021-11-16 21:30:17.041457"]]
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mMiningType Load (1.3ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."description" = ? AND "mining_types"."acronym" = ? LIMIT ?[0m  [["description", "Proof of Work"], ["acronym", "PoW"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:76
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:76
+  [1m[36mMiningType Create (13.5ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of Work"], ["acronym", "PoW"], ["created_at", "2021-11-16 21:30:20.596871"], ["updated_at", "2021-11-16 21:30:20.596871"]]
+  ↳ lib/tasks/dev.rake:76
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:76
+  [1m[36mMiningType Load (1.5ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."description" = ? AND "mining_types"."acronym" = ? LIMIT ?[0m  [["description", "Proof of Stake"], ["acronym", "PoS"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:76
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:76
+  [1m[36mMiningType Create (4.6ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of Stake"], ["acronym", "PoS"], ["created_at", "2021-11-16 21:30:20.623220"], ["updated_at", "2021-11-16 21:30:20.623220"]]
+  ↳ lib/tasks/dev.rake:76
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:76
+  [1m[36mMiningType Load (1.3ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."description" = ? AND "mining_types"."acronym" = ? LIMIT ?[0m  [["description", "Proof of Capacity"], ["acronym", "Poc"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:76
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:76
+  [1m[36mMiningType Create (4.1ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of Capacity"], ["acronym", "Poc"], ["created_at", "2021-11-16 21:30:20.639600"], ["updated_at", "2021-11-16 21:30:20.639600"]]
+  ↳ lib/tasks/dev.rake:76
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:76
+  [1m[36mMiningType Load (1.5ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."acronym" = ? LIMIT ?[0m  [["acronym", "PoW"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:24
+  [1m[36mMiningType Load (1.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ lib/tasks/dev.rake:30
+  [1m[36mMiningType Load (1.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ lib/tasks/dev.rake:36
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ lib/tasks/dev.rake:42
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ lib/tasks/dev.rake:48
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? AND "coins"."mining_type_id" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://cdn-icons-png.flaticon.com/512/1490/1490849.png"], ["mining_type_id", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Create (4.7ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://cdn-icons-png.flaticon.com/512/1490/1490849.png"], ["created_at", "2021-11-16 21:30:24.117619"], ["updated_at", "2021-11-16 21:30:24.117619"], ["mining_type_id", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? AND "coins"."mining_type_id" = ? LIMIT ?[0m  [["description", "Etherum"], ["acronym", "ETH"], ["url_image", "https://cdn-icons-png.flaticon.com/512/2089/2089411.png"], ["mining_type_id", 3], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Create (4.4ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "Etherum"], ["acronym", "ETH"], ["url_image", "https://cdn-icons-png.flaticon.com/512/2089/2089411.png"], ["created_at", "2021-11-16 21:30:24.134543"], ["updated_at", "2021-11-16 21:30:24.134543"], ["mining_type_id", 3]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? AND "coins"."mining_type_id" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://cdn-icons-png.flaticon.com/512/825/825534.png"], ["mining_type_id", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Create (4.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://cdn-icons-png.flaticon.com/512/825/825534.png"], ["created_at", "2021-11-16 21:30:24.149568"], ["updated_at", "2021-11-16 21:30:24.149568"], ["mining_type_id", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (22.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? AND "coins"."mining_type_id" = ? LIMIT ?[0m  [["description", "Iota"], ["acronym", "IOT"], ["url_image", "https://cryptologos.cc/logos/iota-miota-logo.png"], ["mining_type_id", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Create (4.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "Iota"], ["acronym", "IOT"], ["url_image", "https://cryptologos.cc/logos/iota-miota-logo.png"], ["created_at", "2021-11-16 21:30:24.180216"], ["updated_at", "2021-11-16 21:30:24.180216"], ["mining_type_id", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? AND "coins"."mining_type_id" = ? LIMIT ?[0m  [["description", "ZCash"], ["acronym", "ZEC"], ["url_image", "https://cdn-icons-png.flaticon.com/512/4484/4484821.png"], ["mining_type_id", 3], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:53
+  [1m[36mCoin Create (4.5ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "ZCash"], ["acronym", "ZEC"], ["url_image", "https://cdn-icons-png.flaticon.com/512/4484/4484821.png"], ["created_at", "2021-11-16 21:30:24.195287"], ["updated_at", "2021-11-16 21:30:24.195287"], ["mining_type_id", 3]]
+  ↳ lib/tasks/dev.rake:53
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:53
