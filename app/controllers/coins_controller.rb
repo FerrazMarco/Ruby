@@ -41,7 +41,7 @@ class CoinsController < ApplicationController
   def update
     respond_to do |format|
       if @coin.update(coin_params)
-        format.html { redirect_to @coin, notice: "Moeda editada com sucesso" }
+        format.html { redirect_to coins_url, notice: "Moeda editada com sucesso" }
         format.json { render :show, status: :ok, location: @coin }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -68,9 +68,27 @@ class CoinsController < ApplicationController
     def set_coin
       @coin = Coin.find(params[:id])
     end
-
+  
+    # verificando os ativos
+    def coins_active_get
+      if params[:active] == '1'
+        @coins = Coin.activated
+      else
+        @coins = Coin.inactivated
+      end
+    end
+    
+    def coins_active_post
+      @coins = Coin.new(params[:coin])
+      if @client.save
+        redirect_to @coin
+      else
+        render 'new'
+      end
+    end
+  
     # Only allow a list of trusted parameters through.
     def coin_params
-      params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id)
+      params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id, :active)
     end
 end

@@ -21,31 +21,36 @@ namespace :dev do
               description: "Bitcoin",
               acronym: "BTC",
               url_image: "https://cdn-icons-png.flaticon.com/512/1490/1490849.png",
-              mining_type: MiningType.find_by(acronym: 'PoW')
+              mining_type: MiningType.find_by(acronym: 'PoW'),
+              active: '1'
            },
            {
               description: "Etherum",
               acronym: "ETH",
               url_image: "https://cdn-icons-png.flaticon.com/512/2089/2089411.png",
-              mining_type: MiningType.all.sample
+              mining_type: MiningType.all.sample,
+              active: '1'
            },
            {
               description: "Dash",
               acronym: "DASH",
               url_image: "https://cdn-icons-png.flaticon.com/512/825/825534.png",
-              mining_type: MiningType.all.sample
+              mining_type: MiningType.all.sample,
+              active: '1'
            },
            {
                description: "Iota",
                acronym: "IOT",
                url_image: "https://cryptologos.cc/logos/iota-miota-logo.png",
-               mining_type: MiningType.all.sample
+               mining_type: MiningType.all.sample,
+               active: '1'
            },
            {
                description: "ZCash",
                acronym: "ZEC",
                url_image: "https://cdn-icons-png.flaticon.com/512/4484/4484821.png",
-               mining_type: MiningType.all.sample
+               mining_type: MiningType.all.sample,
+               active: '0'
            }
           ]
           

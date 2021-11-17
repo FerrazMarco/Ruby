@@ -1,32 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('coins') %></h1>
-<div class="table-responsive">
-    <table style="width: auto;" class="table table-bordered table-hover table-sm">
-      <thead class="table-light">
-        <tr class="table-active">
-          <th><%= t('menu') %></th>
-          <th><%= @coins.human_attribute_name(:description) %></th>
-          <th><%= @coins.human_attribute_name(:acronym) %></th>
-          <th><%= @coins.human_attribute_name(:url_image) %></th> 
-        </tr>
-      </thead>
-      <tbody>
-        <% @coins.each do |coin| %>
-          <tr>
-            <td>
-                <%= link_to image_tag('show_icon.png', size: '15x15'), coin %>
-                <%= link_to image_tag('edit_icon.svg', size: '15x15'), edit_coin_path(coin) %>
-                <%= link_to image_tag('delete_icon.png', size: '15x15'), coin, method: :delete, data: { confirm: t('messages.confirm') } %>
-            </td>
-            <td><%= coin.description %></td>
-            <td><%= coin.acronym %></td>
-            <td><%= image_tag coin.url_image, size: "25x25" %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-</div>
+
+    <h1><%= t('coins') %></h1>
+    <div class="table-responsive">
+        <table style="width: auto;" class="table table-bordered table-hover table-sm">
+          <thead class="table-light">
+            <tr class="table-active">
+              <th><%= t('menu') %></th>
+              <th><%= @coins.human_attribute_name(:description) %></th>
+              <th><%= @coins.human_attribute_name(:acronym) %></th>
+              <th><%= @coins.human_attribute_name(:url_image) %></th> 
+            </tr>
+          </thead>
+          <tbody>
+            <% @coins.where(active: '1').each do |coin| %>
+              <tr>
+                <td>
+                    <%= link_to image_tag('show_icon.png', size: '15x15'), coin %>
+                    <%= link_to image_tag('edit_icon.svg', size: '15x15'), edit_coin_path(coin) %>
+              <!--  <%= link_to image_tag('delete_icon.png', size: '15x15'), coin, method: :delete, data: { confirm: t('messages.confirm') } %> -->
+                </td>
+                <td><%= coin.description %></td>
+                <td><%= coin.acronym %></td>
+                <td><%= image_tag coin.url_image, size: "25x25" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
 
 <%= link_to t('new.coin'), new_coin_path, class:"btn btn-outline-primary btn-sm" %>
 <%= link_to t('links.home page'), welcome_index_path, class:"btn btn-outline-secondary btn-sm" %>

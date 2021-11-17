@@ -31,6 +31,12 @@
     <%= form.label :mining_type_id %>
     <%= form.select("mining_type_id", @mining_type_options, { include_blank: "Selecione uma opção" }, class:"form-select ") %>
   </div>
+  
+  <div class="form-check form-switch">
+    <%= form.check_box :active, class:"form-check-input", type:"checkbox", role:"switch" %>
+    <%= form.label :active, "Ativo?", class:"form-check-label", for:"flexSwitchCheckChecked" %>
+  </div>
+  
 </br>
   <div class="actions">
     <%= form.submit nil, class:"btn btn-outline-primary btn-sm" %>
