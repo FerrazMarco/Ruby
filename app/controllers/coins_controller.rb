@@ -69,24 +69,6 @@ class CoinsController < ApplicationController
       @coin = Coin.find(params[:id])
     end
   
-    # verificando os ativos
-    def coins_active_get
-      if params[:active] == '1'
-        @coins = Coin.activated
-      else
-        @coins = Coin.inactivated
-      end
-    end
-    
-    def coins_active_post
-      @coins = Coin.new(params[:coin])
-      if @client.save
-        redirect_to @coin
-      else
-        render 'new'
-      end
-    end
-  
     # Only allow a list of trusted parameters through.
     def coin_params
       params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id, :active)
